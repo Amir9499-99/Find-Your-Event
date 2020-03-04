@@ -3,14 +3,19 @@
 </head>
 <body>
 <%- include('../partials/login') %>
-<h1>Tickets List</h1>
-<a href="tickets/new">Add a ticket</a>
 
+<h1 id="tickets-list">Events</h1>
+
+
+<div class="display-ticket">
 <% ticket.forEach(function(t) { %>
-        <div>Name: <%= t.name %></div>
-        <div>Price: <%= t.price %></div>
+        <div> <%= t.name %></div>
+        <div> <%= t.day %></div>
+        <div> <%= t.location %></div>
+        <div> <%= t.price %></div>
 <% }); %>
-
+</div>
+<a href="tickets/:id/show">Details</a>
 
 
 

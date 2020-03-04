@@ -4,9 +4,12 @@ var Schema = mongoose.Schema;
 // There is no model and no 'facts' collection
 
 const ticketSchema = new Schema({
-    name: {type: String, enum: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']},
+    name: String,
     user: {type: Schema.Types.ObjectId, ref: "Users"},
-    price: {type: Number}
+    day: String,
+    location: String,
+    price: String,
+    image: String
 })
 
 module.exports = mongoose.model('Ticket', ticketSchema);
