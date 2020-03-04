@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<%- include('../partials/login') %>
+<h1>Tickets List</h1>
+<a href="tickets/new">Add a ticket</a>
+
+<% ticket.forEach(function(t) { %>
+        <div>Name: <%= t.name %></div>
+        <div>Price: <%= t.price %></div>
+<% }); %>
+
+
+
+
+<%- include('../partials/footer') %>

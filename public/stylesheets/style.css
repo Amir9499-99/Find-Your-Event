@@ -1,16 +1,46 @@
-.brand-logo {
-  margin-left: 15px;
+*{
+  font-family: 'EB Garamond', serif;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+/*body  {*/
+/*  background-image: url("https://www.ecopetit.cat/wpic/mpic/98-985436_galaxy-wallpaper-free-download-earth-wallpaper-hd.jpg");*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: cover;*/
+/*}*/
+
+.login{
+  display: grid;
+  justify-content: right;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 10px;
+  color: black;
 }
 
-#search-row form {
-  padding-top: 20px;
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
+h1{
+  color: darkslategrey;
+  font-size: 85px;
+  height: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 
-.student-name {
-  position: relative;
-  top: -5px;
 }

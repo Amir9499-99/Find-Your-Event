@@ -1,15 +1,10 @@
 var express = require('express');
 var router = express.Router();
 const passport = require('passport');
-const userCtrl = require('../controllers/users');
-
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('users', { title: 'Main Page' });
-// });
+const ticketsCtrl = require('../controllers/tickets');
 
 // The root route renders our only view
-router.get('/', userCtrl.index);
+router.get('/', ticketsCtrl.index);
 
 router.get('/auth/google', passport.authenticate(
     'google',
@@ -19,7 +14,7 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
     'google',
     {
-      successRedirect: '/',
+      successRedirect: '/tickets',
       failureRedirect: '/'
     }
 ));
