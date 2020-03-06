@@ -1,6 +1,6 @@
 # Find Your Ticket
 ​
-##### This web app is developed to buy or sale any tickets for any event. If you want to buy a ticket to rock concerts or Taylor Switft you can to that here. People can either buy or sell tickets to each other. 
+##### This web app is developed to buy or sale any tickets for any event. If you want to buy a ticket to rock concerts or Taylor Switft you can do that here. People can either buy or sell tickets to each other. 
 ​
 ## Screenshots
 ​![alt text](https://i.imgur.com/lAZpz8n.jpg "Logo Title Text 1")

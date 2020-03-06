@@ -4,7 +4,7 @@
 <form>
 <%- include('../partials/login') %>
 
-<form action="/tickets/comments/<%= ticket._id%>" method="POST">
+<form action="/tickets/comments/<%= foundComment._id%>" method="POST">
     <input type="text" name="content" value="<%= foundComment.content%>">
     <button  class="editDelete" type="submit">Update Comment</button>
 </form>
