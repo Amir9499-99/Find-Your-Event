@@ -13,7 +13,7 @@ MongoDB, Mongoose, Vanilla JavaScript, node.js, express,HTML5, CSS, Google OAuth
 ​
 ## Getting Started
 
-​[Click to play](https://find-your-event.herokuapp.com/) <br>
+​[Click open app](https://find-your-event.herokuapp.com/) <br>
 ​[Click for repo](https://https://github.com/Amir9499-99/Find-Your-Event/)
 
 ## Next Steps
