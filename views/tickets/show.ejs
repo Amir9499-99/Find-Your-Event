@@ -13,16 +13,16 @@
 </section><br>
 
 <% ticket.comment.forEach(com => {%>
-    <div class="text"><%= com.content %></div>
+    <div class="edit"><%= com.content %></div>
         <% if(user && user._id == com.createdBy.toString()){%>
-    <a href="/comments/<%= com._id %>/edit"><button type="submit">Edit</button></a>
-    <form action="/tickets/<%= ticket._id%>/comments/<%= com._id %>?_method=DELETE" method="POST"><button type="submit">Delete </button></form> <br>
+    <a href="/comments/<%= com._id %>/edit"><button class="editDelete" type="submit">Edit</button></a>
+    <form action="/tickets/<%= ticket._id%>/comments/<%= com._id %>?_method=DELETE" method="POST"><button class="editDelete" type="submit">Delete </button></form> <br>
 <% }%>
     <% })%><br>
 <% if (user){%>
 <form id="comment" action="/tickets/<%= ticket._id%>/comments" method="POST">
     <input name="content">
-    <button type="submit">Add Comment</button>
+    <button class="editDelete" type="submit">Add Comment</button>
 </form>
 <% }%>
 

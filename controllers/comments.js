@@ -8,6 +8,7 @@ module.exports = {
 };
 
 function update(req, res) {
+    console.log('function is being called')
     Ticket.findById(req.params.ticketId, function(err, foundTicket) {
         const foundComment = foundTicket.comment.id(req.params.commentId)
         foundComment.content = req.body.content
@@ -21,6 +22,7 @@ function update(req, res) {
 
 
 function editShow(req, res) {
+    console.log("EDIT SHOW PAGE")
     Ticket.findOne({'comment._id': req.params.commentId}, function(err, ticket){
         let commentThatWeFound
         let commentIdFromParams = req.params.commentId
@@ -31,9 +33,12 @@ function editShow(req, res) {
         })
         if (err) return err;
 
+        console.log("here is the ticket ",ticket)
+        console.log("FOUND COMMENT: ", commentThatWeFound)
         res.render('tickets/edit', {
             user: req.user,
             foundComment: commentThatWeFound,
+            ticket:ticket,
 
         })
 

@@ -9,7 +9,7 @@
 
 ​
 ## Technologies Used
-MongoDB, Mongoose, Vanilla JavaScript, node.js, express,HTML5, CSS, ejs, Heroku, Atlas
+MongoDB, Mongoose, Vanilla JavaScript, node.js, express,HTML5, CSS, Google OAuth, Heroku, Atlas
 ​
 ## Getting Started
 
@@ -18,3 +18,4 @@ MongoDB, Mongoose, Vanilla JavaScript, node.js, express,HTML5, CSS, ejs, Heroku,
 
 ## Next Steps
 - Add payment futures
+- Add delete button on the main page
