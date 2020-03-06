@@ -1,16 +1,31 @@
 <%- include('../partials/header') %>
-<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/style.css'/>
 </head>
-<body>
+
 
 <%- include('../partials/login') %>
 
-<section id="details">
-    <div> <%= t.name %></div>
-    <div> <%= t.day %></div>
-    <div> <%= t.location %></div>
-    <div> <%= t.price %></div>
-</section>
+<section class="details">
+    <div> <%= ticket.name %></div>
+    <div> <%= ticket.day %></div>
+    <div> <%= ticket.location %></div>
+    <div> <%= ticket.price %></div>
+</section><br>
+
+<% ticket.comment.forEach(com => {%>
+    <div class="text"><%= com.content %></div>
+        <% if(user && user._id == com.createdBy.toString()){%>
+    <a href="/comments/<%= com._id %>/edit"><button type="submit">Edit</button></a>
+    <form action="/tickets/<%= ticket._id%>/comments/<%= com._id %>?_method=DELETE" method="POST"><button type="submit">Delete </button></form> <br>
+<% }%>
+    <% })%><br>
+<% if (user){%>
+<form id="comment" action="/tickets/<%= ticket._id%>/comments" method="POST">
+    <input name="content">
+    <button type="submit">Add Comment</button>
+</form>
+<% }%>
+
 
 
 

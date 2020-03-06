@@ -9,11 +9,12 @@ module.exports = {
 };
 
 function show(req, res) {
-    Ticket.findById(req.params.id, function (err, tickets) {
+    Ticket.findById(req.params.id, function (err, ticket) {
         if (err) return err;
-        res.render('tickets/:id/show', {
+        console.log(ticket)
+        res.render('tickets/show', {
             user: req.user,
-            tickets
+            ticket
         })
     })
 }
@@ -29,17 +30,18 @@ function create(req, res) {
 }
 
 function newTicket(req, res) {
+    // req.body['user'] = req.user._id;
     res.render('tickets/new', {
         user: req.user,
     })
 }
 
 function main(req, res) {
-    Ticket.find({}, function (err, ticket) {
+    Ticket.find({}, function (err, tickets) {
         if (err) console.error(err)
         res.render('tickets/index', {
             user: req.user,
-            ticket: ticket
+            tickets: tickets
         })
     })
 }

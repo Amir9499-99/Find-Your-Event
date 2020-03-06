@@ -1,22 +1,21 @@
 <%- include('../partials/header') %>
-<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/tickets.css' />
 </head>
 <body>
 <%- include('../partials/login') %>
 
-<h1 id="tickets-list">Events</h1>
+<h1 id="tickets-list">Events Lists</h1>
 
-
+<% tickets.forEach(function(ticket) { %>
 <div class="display-ticket">
-<% ticket.forEach(function(t) { %>
-        <div> <%= t.name %></div>
-        <div> <%= t.day %></div>
-        <div> <%= t.location %></div>
-        <div> <%= t.price %></div>
-<% }); %>
+
+        <div> <%= ticket.name %></div>
+        <div id="day"> <%= ticket.day %></div><br>
+        <div> <%= ticket.location %></div><br>
+        <div> <%= ticket.price %> </div>
+                <a  id="details" href="/tickets/<%= ticket._id %>">Details</a>
+
 </div>
-<a href="tickets/:id/show">Details</a>
 
-
-
+<% }); %>
 <%- include('../partials/footer') %>

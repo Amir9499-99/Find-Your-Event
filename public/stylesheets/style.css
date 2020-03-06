@@ -1,8 +1,6 @@
 *{
   font-family: 'EB Garamond', serif;
   box-sizing: border-box;
-  width: auto;
-  height: auto;
 }
 
 header{
@@ -10,11 +8,9 @@ header{
   text-align: center;
 }
 
-/*body  {*/
-/*  background-image: url("https://www.ecopetit.cat/wpic/mpic/98-985436_galaxy-wallpaper-free-download-earth-wallpaper-hd.jpg");*/
-/*  background-repeat: no-repeat;*/
-/*  background-size: cover;*/
-/*}*/
+body  {
+ background-image: url("https://www.itl.cat/pngfile/big/72-726602_hd-background-color-transition.jpg");
+}
 
 .login{
   display: grid;
@@ -22,13 +18,13 @@ header{
   text-decoration: none;
   font-size: 20px;
   margin-right: 10px;
-  color: black;
+  color: gray;
 }
 
 #slogan{
-  color: darkslategrey;
+  color: wheat;
   font-size: 85px;
-  height: 8em;
+  height: 6em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,5 +39,62 @@ header{
   font-size: 35px;
   margin: 0;
 }
+
+button{
+  display: inline;
+  float: left;
+}
+#navbar{
+  text-decoration:none;
+  color: wheat;
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+a{
+  text-align: center;
+  display: inline;
+  margin: 20px;
+  color: wheat;
+  text-decoration: none;
+
+}
+
+a:hover{
+  color: cadetblue;
+}
+
+input, label, .details{
+  display: block;
+  width: 240px;
+  height: auto;
+  margin: 10px auto;
+  text-align: center;
+  color: wheat;
+  font-size: 25px;
+}
+
+input{
+  color: black;
+}
+
+.text{
+  color: wheat;
+}
+
+button{
+  margin: 10px auto;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
 
 

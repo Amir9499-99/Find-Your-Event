@@ -1,6 +1,11 @@
-<a href="tickets/new">Add a ticket</a>
+<% if(user) { %>
+<div id="navbar">
+    <a href="/">Home</a>
+    <a href="tickets/new">Add a ticket</a>
+    <a href="/tickets">Ticket List</a>
+    <a href="/carts">Cart</a>
 
-
+<% } %>
 
 <div class=“navbar-fixed”>
     <nav>
@@ -8,8 +13,9 @@
             <% if (user) { %>
                 <a href=/logout class="login">Log Out</a>
             <% } else { %>
-                <a href=auth/google class="login">Login</a>
+                <a href=/auth/google class="login">Login</a>
             <% } %>
         </div>
     </nav>
+</div>
 </div>

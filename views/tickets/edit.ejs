@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<form>
+<%- include('../partials/login') %>
+
+<form action="/comments/<%= foundComment._id %>/edit?_method=PUT" method="POST">
+    <input type="text" value="<%= foundComment.content%>">
+    <button type="submit">Update Comment</button>
+</form>
+
+<%- include('../partials/footer') %>
+
+
